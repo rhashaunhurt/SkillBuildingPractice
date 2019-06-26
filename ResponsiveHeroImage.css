@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: 0;
+}
+div{
+	height: 100%;
+	width:100%;
+}
+
+.chickenhero-container{
+	display: grid;
+	max-height: 1000px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 200px 1fr 1fr 200px;
+}
+
+/* I originally set the height and width as a percentage to fill the different grid areas and then the "percentage" value became the theme of the whole project*/
+div{
+	height: 100%;
+	width:100%;
+}
+
+/* This gives everything the same starting point to be built around.  The "width: 100%" was originally for the image tag on the html document.  
+	It really helped out with the flexibility of the grid sizes too*/
+.grid-overlay {
+	width: 100%;
+	max-width: 520px;
+	grid-column: 1 / 3;
+	grid-row: 2 / 3;
+	position:relative;
+}
+
+/*This sets of a circle around the "hero" image to detect whenever it is clicked*/
+#hit-det{
+	border-radius: 50%;
+	z-index: 30;
+}
+
+/*This places the starting origin of the surrounding images in the very center of the current grid area. */
+#menu{
+	z-index: 13;
+	position: absolute;
+	width:100%;
+	height:100%;
+	top: 48%;
+	left: 49%;
+}
+
+/* This sets the width and height to the same size as the grid area it precides in so that the translate function will work properly.  Rotates, moves, then rotates back
+	whatever icon, image, background you have within it.  I had to mess with the numbers a little bit and hardcode in an extra 33% movement with the translate so
+	that the outer images rest around the "hero" image.  (47% + 33% = 80%), (42% + 33% = 75%)...*/
+#menu-item-one{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform: rotate(-90deg) translate(80%) rotate(90deg);
+	z-index: 14;
+	}
+
+#menu-item-two{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform: rotate(-55deg) translate(75%) rotate(45deg);
+	z-index: 14;
+	}
+#menu-item-three{
+	position: absolute;
+	width: 100%;	
+	height: 100%;
+	transform: rotate(-20deg) translate(65%);	
+	z-index: 14;		
+	}	
+
+#menu-item-four{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform: rotate(45deg) translate(46%) rotate(-45deg);
+	z-index: 14;
+	}
+
+/*This sets the outside images to be a third of the size of the "hero"*/
+.menu-image{
+	position: absolute;
+	width: 33%;
+	height: 33%;
+	border-radius: 50%;
+}
+
+#menu-item-one a{
+	background-image: url(Photos/eggs.jpg);
+	background-size: cover;
+}
+#menu-item-two a{
+	background-image: url(Photos/steak.jpg);
+	background-size: cover;
+}
+#menu-item-three a{
+	background-image: url(Photos/vegetable.jpg);
+	background-size: cover;
+}
+#menu-item-four a{
+	background-image: url(Photos/bacon.jpg);
+	background-size: cover;
+}
+	/*clip-path: circle(50% at 0 50%);*/
+	/*transform: rotate(45deg) translate(15vw) rotate(-45deg);*/

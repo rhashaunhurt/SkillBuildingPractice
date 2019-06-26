@@ -1,0 +1,110 @@
+
+
+*{
+	margin:0;
+	padding:0;
+}
+.grid-container{
+	width: 100%;
+	height: 50%;
+	max-height: 1700px;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(10, 1fr);
+}
+
+.hero-image-overlay{
+	grid-row: 2 / 6;
+	grid-column: 4 / 8;
+	width: 100%;
+	transform-origin: center;
+	transform: scale(.95);
+}
+
+#hero-image{
+	box-shadow: 0px 0px 400px black;
+	border-radius: 75%;
+	transform: scale(.75);
+}
+#hit-det{
+	z-index: 30;
+	border-radius: 75%;
+	transform: translateY(-25%) scale(.75);
+}
+
+#outer-image-container{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform: rotate(180deg);
+}
+
+#sub-hero-image-one{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-origin: center;
+	transform: rotate(30deg)  scale(.25) translate(250%) rotate(-30deg);
+	border-radius: 50%;
+	background-image: url(Photos/eggs.jpg);
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0px 0px 800px black;
+}
+
+#sub-hero-image-two{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:red;
+	transform-origin: center;
+	transform: rotate(60deg)  scale(.25) translate(250%) rotate(-60deg);
+	border-radius: 50%;
+	background-image: url(Photos/steak.jpg);
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0px 0px 800px black;
+}
+
+#sub-hero-image-three{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:red;
+	transform-origin: center;
+	transform: rotate(90deg)  scale(.25) translate(250%);
+	border-radius: 50%;
+	box-shadow: 0px 0px 800px black;
+}
+
+#sub-hero-image-four{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:red;
+	transform-origin: center;
+	transform: rotate(120deg)  scale(.25) translate(250%);
+	border-radius: 50%;
+	box-shadow: 0px 0px 800px black;
+}
+
+#sub-hero-image-five{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:red;
+	transform-origin: center;
+	transform: rotate(150deg)  scale(.25) translate(250%);
+	border-radius: 50%;
+	box-shadow: 0px 0px 800px black;
+}
+
+
+.main-background{
+	grid-row: 1 / 11;
+	grid-column: 1 / 6;
+	width: 100%;
+	height: 100%;
+	background: grey;
+	display: block;
+}
